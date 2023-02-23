@@ -1,8 +1,8 @@
 #include "WindowDelegate.hpp"
 #include <utilities/MacrosAssert.hpp>
 
-WindowDelegate::WindowDelegate( String p_windowName, size_t p_w, size_t p_h )
-: window_name { p_windowName }, width { p_w }, heigth { p_h }
+WindowDelegate::WindowDelegate( String p_windowName, size_t p_w, size_t p_h ) noexcept
+: window_title { p_windowName }, width { p_w }, heigth { p_h }
 {
     initGLFW();
     createWindow();
@@ -27,7 +27,7 @@ void
 WindowDelegate::createWindow() noexcept
 {
     WindowHandler t_window {
-        glfwCreateWindow( width, heigth, window_name.data(), nullptr, nullptr),
+        glfwCreateWindow( width, heigth, window_title.data(), nullptr, nullptr),
         deleteWindow
     };
 

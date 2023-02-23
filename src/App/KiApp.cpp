@@ -5,7 +5,5 @@
 void
 KiApp::run()
 {
-    std::cout << "Hello!\n";
-
     KiEngine engine {};
 }
