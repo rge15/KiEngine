@@ -10,6 +10,9 @@ KiEngine::KiEngine(String p_appName, size_t p_w, size_t p_h) noexcept
 
     surface_delegate    = std::make_unique<SurfaceDelegate>( vk_instance, vk_window );
 
+    auto& vk_surface    = surface_delegate.get()->getSurface();
+
+    device_delegate     = std::make_unique<DeviceDelegate>( vk_instance, vk_surface);
     
 
 

@@ -4,9 +4,10 @@
 class KiEngine
 {
 private:
-    UniqPtr<WindowDelegate> window_delegate { nullptr };
-    UniqPtr<InstanceDelegate> instance_delegate { nullptr };
-    UniqPtr<SurfaceDelegate> surface_delegate { nullptr };
+    UniqPtr<WindowDelegate>     window_delegate     { nullptr };
+    UniqPtr<InstanceDelegate>   instance_delegate   { nullptr };
+    UniqPtr<SurfaceDelegate>    surface_delegate    { nullptr };
+    UniqPtr<DeviceDelegate>     device_delegate     { nullptr };
 
 public:
 

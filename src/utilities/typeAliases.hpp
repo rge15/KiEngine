@@ -11,3 +11,9 @@ using Vector = std::vector<T...>;
 
 template<typename... T>
 using Tuple = std::tuple<T...>;
+
+template<typename T>
+using Opt = std::optional<T>;
+
+template<typename... T>
+using Set = std::set<T...>;
