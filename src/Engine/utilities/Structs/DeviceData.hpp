@@ -2,9 +2,9 @@
 #include <utilities/Includes/graphicInclude.hpp>
 #include <utilities/typeAliases.hpp>
 #include <Engine/utilities/Structs/SwapchainDeviceDetails.hpp>
-#include <Engine/utilities/Structs/PhysicalDeviceSelector.hpp> 
+#include <Engine/utilities/Structs/PhysicalDeviceSelector.hpp>
 #include <utilities/MacrosAssert.hpp>
-#include <Engine/Delegates/QueueDelegate.hpp>
+#include <Engine/Delegates/Driver/QueueDelegate.hpp>
 
 struct DeviceData
 {
@@ -21,6 +21,7 @@ public:
     QueueDelegate   queue_delegate {};
 
 public:
+
     void
     createDevice( VkSurfaceKHR& p_surface ) noexcept;
 

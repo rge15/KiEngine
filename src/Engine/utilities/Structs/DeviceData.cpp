@@ -65,7 +65,6 @@ DeviceData::createLogicalDevice()
     auto result = vkCreateDevice( physical_device, &create_info, nullptr, &device );
 
     ASSERT( result == VK_SUCCESS, "Error creating the logical device")
-    printf("Logical device created succesfully");
 }
 
 //-----------------------------------------------------------------------------

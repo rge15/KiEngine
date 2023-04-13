@@ -12,7 +12,6 @@ private:
     VkQueue graphic_queue { VK_NULL_HANDLE };
     VkQueue present_queue { VK_NULL_HANDLE };
 
-
     float queue_priority { 1.f };
 
 public:
@@ -33,6 +32,12 @@ public:
 
     void
     obtainQueueHandlers( VkDevice& p_device ) noexcept;
+
+    inline
+    uint32_t getGraphicQueueID() const noexcept{ return graphic_id.value(); };
+
+    inline
+    uint32_t getPresentQueueID() const noexcept{ return present_id.value(); };
 
 };
 

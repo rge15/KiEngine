@@ -1,13 +1,15 @@
 #include <utilities/typeAliases.hpp>
 #include <Engine/Delegates/DelegateIncludes.hpp>
 
+#include <Engine/Managers/DriverMng.hpp>
+
 class KiEngine
 {
 private:
-    UniqPtr<WindowDelegate>     window_delegate     { nullptr };
-    UniqPtr<InstanceDelegate>   instance_delegate   { nullptr };
-    UniqPtr<SurfaceDelegate>    surface_delegate    { nullptr };
-    UniqPtr<DeviceDelegate>     device_delegate     { nullptr };
+    DriverMng driver_ { "KiEngine",  1280, 720 };
+
+    //TODO : Plantear siguiente parte motor Render/Rsc/WorkMng ...
+
 
 public:
 
